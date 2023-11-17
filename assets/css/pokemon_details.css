@@ -1,0 +1,98 @@
+body {
+    font-family: fantasy;
+}
+
+.arrow {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-top: 10px solid transparent;
+    border-right: 10px solid #000;
+    border-bottom: 10px solid transparent;
+    transform: rotate(45deg);
+    margin-right: 10px;
+}
+
+.pokemon-detail {
+    border-radius: 10px;
+    width: 500px;
+    margin: 0 auto;
+}
+
+.pokemon-header {
+    display: grid;
+    align-items: center;
+}
+
+.pokemon-title {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.pokemon-type {
+    display: inline-block;
+    width: 100px;
+    background-color: #ccc;
+    text-align: center;
+    margin-top: 10px;
+    border-radius: 50px;
+}
+
+.pokemon-image {
+    background-image: url("../img/pokeball.png");
+    background-size: cover;
+    width: 300px;
+    height: 250px;
+    padding-bottom: 25px;
+}
+
+.pokemon-image img {
+    position: relative;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.pokemon-tabs {
+    padding-top: 15px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.pokemon-tab {
+    cursor: pointer;
+    padding: 10px;
+}
+
+.pokemon-tab:hover {
+    background-color: #ccc;
+}
+
+.pokemon-about {
+    display: none;
+}
+
+.pokemon-base-stats {
+    display: none;
+}
+
+.pokemon-evolutions {
+    display: none;
+}
+
+img {
+    height: 250px;
+    width: 250px;
+}
+
+#pokemon-about {
+    display: block;
+}
+
+#pokemon-base-stats {
+    display: none;
+}
+
+#pokemon-evolutions {
+    display: none;
+}
