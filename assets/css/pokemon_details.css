@@ -52,7 +52,7 @@ body {
 }
 
 .pokemon-tabs {
-    padding-top: 15px;
+    padding-top: 30px;
     display: flex;
     justify-content: space-around;
 }
@@ -93,4 +93,23 @@ img {
 
 #pokemon-evolutions {
     display: none;
+}
+
+.pokemon-content {
+    padding: 20px;
+}
+
+.pokemon-top {
+    padding-left: 10px;
+    padding-bottom: 10px;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+}
+
+.pokemon-bottom {
+    z-index: 1;
+    border: 1px solid black;
+    border-radius: 25px;
+    margin-top: -25px;
+    background-color: white;
 }

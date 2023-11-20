@@ -1,10 +1,10 @@
 // Function to create div based on the number of Pokémon
 function generate_div() {
     // GitHUb URL where all the pokemon data are
-    const url = "https://raw.githubusercontent.com/Raghork/flutter/main/pokedex_data/pokedex.json";
+    const url = "https://raw.githubusercontent.com/Raghork/pokedex/main/assets/json/pokedex.json";
     // Taking the div with class 'body'
     const body = document.querySelector('.body');
-    
+    const imgpath = "../Pokedex/assets/img/";
     const htmlPage = document.createElement('html');
 
     // Fetching the data
@@ -72,7 +72,7 @@ function generate_div() {
                     break;
             }
             // Add image to the pokemon div
-            img.src = jsonData['pokemon'][i]['img'];
+            img.src = imgpath + "" + jsonData['pokemon'][i]['img'];
             div.appendChild(img);
             // Now we will add the click event listener to the pokemon div
             div.addEventListener('click', function() {

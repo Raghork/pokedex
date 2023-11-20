@@ -1,7 +1,8 @@
 function pokemonInformation() {
     // GitHUb URL where all the pokemon data are
-    const url = "https://raw.githubusercontent.com/Raghork/flutter/main/pokedex_data/pokedex.json";
+    const url = "https://raw.githubusercontent.com/Raghork/pokedex/main/assets/json/pokedex.json";
     const urlParams = window.location.href.split('?')[1].split('&');
+    const imgpath = "../assets/img/";
     fetch(url).then(response => response.json()).then(jsonData => {
         for(let i = 0; i < Object.keys(jsonData['pokemon']).length; i++) {
             if(jsonData['pokemon'][i]['id'] == urlParams) {
@@ -17,7 +18,7 @@ function pokemonInformation() {
                 }
                 // Changing the image
                 let img = new Image();
-                img.src = jsonData['pokemon'][i]['img'];
+                img.src = imgpath + "" + jsonData['pokemon'][i]['img'];
                 document.querySelector('.pokemon-image').appendChild(img);
                 // Changing the name in the About
                 document.querySelector('#name').textContent = "Name: " + jsonData['pokemon'][i]['name'];
@@ -72,6 +73,64 @@ function pokemonInformation() {
                     }
                 } else {
                     document.querySelector('#nextEvolution').textContent = "Next Evolution: Maxed out";
+                }
+                const pokemonTopDiv = document.querySelector('.pokemon-top');
+                // Changing the background color
+                switch(jsonData['pokemon'][i]['types'][0]) {
+                    case 'Normal':
+                        pokemonTopDiv.style.backgroundColor = "#A8A77A";
+                        break;
+                    case 'Fire':
+                        pokemonTopDiv.style.backgroundColor = "#EE8130";
+                        break;
+                    case 'Water':
+                        pokemonTopDiv.style.backgroundColor = "#6390F0";
+                        break;
+                    case 'Grass':
+                        pokemonTopDiv.style.backgroundColor = "#7AC74C";
+                        break;
+                    case 'Electric':
+                        pokemonTopDiv.style.backgroundColor = "#F7D02C";
+                        break;
+                    case 'Ice':
+                        pokemonTopDiv.style.backgroundColor = "#96D9D6";
+                        break;
+                    case 'Fighting':
+                        pokemonTopDiv.style.backgroundColor = "#C22E28";
+                        break;
+                    case 'Poison':
+                        pokemonTopDiv.style.backgroundColor = "#A33EA1";
+                        break;
+                    case 'Ground':
+                        pokemonTopDiv.style.backgroundColor = "#E2BF65";
+                        break;
+                    case 'Flying':
+                        pokemonTopDiv.style.backgroundColor = "#A98FF3";
+                        break;
+                    case 'Psychic':
+                        pokemonTopDiv.style.backgroundColor = "#F95587";
+                        break;
+                    case 'Bug':
+                        pokemonTopDiv.style.backgroundColor = "#A6B91A";
+                        break;
+                    case 'Rock':
+                        pokemonTopDiv.style.backgroundColor = "#B6A136";
+                        break;
+                    case 'Ghost':
+                        pokemonTopDiv.style.backgroundColor = "#735797";
+                        break;
+                    case 'Dragon':
+                        pokemonTopDiv.style.backgroundColor = "#6F35FC";
+                        break;
+                    case 'Dark':
+                        pokemonTopDiv.style.backgroundColor = "#705746";
+                        break;
+                    case 'Steel':
+                        pokemonTopDiv.style.backgroundColor = "#B7B7CE";
+                        break;
+                    case 'Fairy':
+                        pokemonTopDiv.style.backgroundColor = "#D685AD";
+                        break;
                 }
             }
         }
