@@ -4,7 +4,7 @@ function generate_div() {
     const url = "https://raw.githubusercontent.com/Raghork/pokedex/main/assets/json/pokedex.json";
     // Taking the div with class 'body'
     const body = document.querySelector('.body');
-    const imgpath = "../assets/img/";
+    const imgpath = "../pokedex/assets/img/";
     const htmlPage = document.createElement('html');
 
     // Fetching the data
