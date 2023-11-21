@@ -11,12 +11,17 @@ header {
 }
 
 .pokemon {
+    border: 1px black solid;
     text-align: center;
     padding: 25px;
     width: 100px;
     height: 100px;
     border-radius: 50px;
     margin: 5px;
+}
+
+.pokemon:hover {
+    transform: scale(1.2);
 }
 
 img {
