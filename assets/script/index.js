@@ -74,6 +74,7 @@ function generate_div() {
             // Add image to the pokemon div
             img.src = imgpath + "" + jsonData['pokemon'][i]['img'];
             console.log(imgpath + "" + jsonData['pokemon'][i]['img']);
+            console.log(imgpath + "" + jsonData['pokemon'][i]['img']);
             div.appendChild(img);
             // Now we will add the click event listener to the pokemon div
             div.addEventListener('click', function() {
