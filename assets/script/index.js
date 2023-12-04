@@ -3,8 +3,8 @@ function generate_div() {
     // GitHUb URL where all the pokemon data are
     const url = "https://raw.githubusercontent.com/Raghork/pokedex/main/assets/json/pokedex.json";
     // Taking the div with class 'body'
-    const body = document.querySelector('.body');
-    const imgpath = "../pokedex/assets/img/";
+    const body = document.querySelector('.pokemon-div');
+    const imgpath = "../Pokedex/assets/img/";
     const htmlPage = document.createElement('html');
 
     // Fetching the data
