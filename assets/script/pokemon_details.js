@@ -19,7 +19,6 @@ function pokemonInformation() {
                 // Changing the image
                 let img = new Image();
                 img.src = imgpath + "" + jsonData['pokemon'][i]['img'];
-                console.log(imgpath + "" + jsonData['pokemon'][i]['img']);
                 document.querySelector('.pokemon-image').appendChild(img);
                 // Changing the name in the About
                 document.querySelector('#name').textContent = "Name: " + jsonData['pokemon'][i]['name'];
